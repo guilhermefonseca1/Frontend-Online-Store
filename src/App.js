@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { getCategories } from './services/api';
+import ProductList from './pages/ProductList';
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +15,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={ ProductList } />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
