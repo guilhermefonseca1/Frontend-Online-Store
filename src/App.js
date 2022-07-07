@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { getCategories } from './services/api';
 import ProductList from './pages/ProductList';
+import Cart from './pages/Cart';
 
 class App extends Component {
   componentDidMount() {
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+          <Route path="/cart" component={ Cart } />
           <Route path="/" component={ ProductList } />
         </Switch>
       </BrowserRouter>
