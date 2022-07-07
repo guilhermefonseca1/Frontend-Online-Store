@@ -19,7 +19,7 @@
   color: white;
 }
 
-input[ type = 'radio' ]:checked + p {
+[ type = 'radio' ]:checked + p {
   background-color: #666;
   color: white;
 }
