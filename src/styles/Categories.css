@@ -7,14 +7,19 @@
 .Categories label {
   align-items: flex-start;
   display: flex;
-  padding: 0 10px;
+}
+
+.Categories p {
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 10px;
 }
 
 .Categories input {
   display: none;
 }
 
-.Categories label:hover {
+.Categories p:hover {
   background-color: #666;
   color: white;
 }
