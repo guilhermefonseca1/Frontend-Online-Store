@@ -3,6 +3,7 @@ import '../styles/ProductList.css';
 import { ShoppingCart } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 import ResultsContent from '../components/ResultsContent';
+import Categories from '../components/Categories';
 
 export default class ProductList extends Component {
   render() {
@@ -25,7 +26,10 @@ export default class ProductList extends Component {
             />
           </Link>
         </header>
-        <ResultsContent />
+        <div className="content">
+          <Categories />
+          <ResultsContent />
+        </div>
       </section>
     );
   }
