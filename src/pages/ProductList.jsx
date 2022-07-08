@@ -11,26 +11,59 @@ export default class ProductList extends Component {
     super();
     this.state = {
       inputValue: '',
+      searchQuery: '',
+      prevCategoryValue: '',
+      categoryValue: '',
       results: [],
       searchStatus: false,
     };
   }
 
+  componentDidUpdate() {
+    const { categoryValue, prevCategoryValue } = this.state;
+    // String vazia retorna falso.
+    if (categoryValue && categoryValue !== prevCategoryValue) {
+      this.getProductsByCategory();
+      console.log('Atualizou');
+    }
+  }
+
   handleChange = ({ target }) => {
     const { name, type } = target;
-    const value = type !== 'text' ? target.checked : target.value;
+    const value = type !== 'text' ? target.id : target.value;
 
     this.setState({
       [name]: value,
     });
   }
 
-  getProducts = async () => {
+  handleClick = () => {
     const { inputValue } = this.state;
-    const { results } = await getProductsFromCategoryAndQuery('', inputValue);
+    this.setState({
+      searchQuery: inputValue,
+    }, () => {
+      this.getProducts();
+    });
+  }
+
+  getProductsByCategory = () => {
+    this.getProducts();
+    const { categoryValue } = this.state;
+    this.setState({
+      prevCategoryValue: categoryValue,
+    });
+  }
+
+  getProducts = async () => {
+    const { categoryValue, searchQuery } = this.state;
+    const { results } = await getProductsFromCategoryAndQuery(
+      categoryValue,
+      searchQuery,
+    );
     this.setState({
       results,
       searchStatus: true,
+      searchQuery: '',
     });
   }
 
@@ -49,7 +82,7 @@ export default class ProductList extends Component {
           />
           <button
             type="submit"
-            onClick={ this.getProducts }
+            onClick={ this.handleClick }
             data-testid="query-button"
           >
             Pesquisar
@@ -66,7 +99,9 @@ export default class ProductList extends Component {
           </Link>
         </header>
         <div className="content">
-          <Categories />
+          <Categories
+            handleChange={ this.handleChange }
+          />
           <ResultsContent
             results={ results }
             searchStatus={ searchStatus }
