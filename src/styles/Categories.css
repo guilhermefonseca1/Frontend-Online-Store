@@ -1,0 +1,30 @@
+.Categories {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Categories label {
+  align-items: flex-start;
+  display: flex;
+}
+
+.Categories p {
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.Categories input {
+  display: none;
+}
+
+.Categories p:hover {
+  background-color: #666;
+  color: white;
+}
+
+[ type = 'radio' ]:checked + p {
+  background-color: #666;
+  color: white;
+}

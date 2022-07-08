@@ -15,3 +15,7 @@ input {
   position: absolute;
   right: 20px;
 }
+
+.content {
+  display: flex;
+}
