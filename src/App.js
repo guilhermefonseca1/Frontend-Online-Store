@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import { getCategories } from './services/api';
+// import { getCategories } from './services/api';
 import ProductList from './pages/ProductList';
 import Cart from './pages/Cart';
 
 class App extends Component {
-  componentDidMount() {
-    this.showCategories();
-  }
+  // componentDidMount() {
+  //   this.showCategories();
+  // }
 
-  showCategories = async () => {
-    console.log(await getCategories());
-  }
+  // showCategories = async () => {
+  //   console.log(await getCategories());
+  // }
 
   render() {
     return (
