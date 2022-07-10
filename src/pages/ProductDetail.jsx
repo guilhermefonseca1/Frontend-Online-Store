@@ -58,14 +58,16 @@ export default class ProductDetail extends Component {
           </div>
           <section className="productAttributes">
             {
-              attributes.map(({ name, value_name: valueName, id }) => (
-                <div
-                  key={ id }
-                >
-                  <p className="attrTitle">{name}</p>
-                  <p className="attrValue">{valueName}</p>
-                </div>
-              ))
+              attributes
+                .filter(({ name, value_name: valueName }) => name && valueName)
+                .map(({ name, value_name: valueName, id }) => (
+                  <div
+                    key={ id }
+                  >
+                    <p className="attrTitle">{name}</p>
+                    <p className="attrValue">{valueName}</p>
+                  </div>
+                ))
             }
           </section>
         </div>
