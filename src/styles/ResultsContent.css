@@ -3,3 +3,9 @@
   flex-grow: 1;
   justify-content: center;
 }
+
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
