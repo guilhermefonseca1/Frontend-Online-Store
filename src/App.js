@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
 // import { getCategories } from './services/api';
 import ProductList from './pages/ProductList';
 import Cart from './pages/Cart';
