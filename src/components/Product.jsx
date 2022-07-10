@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import '../styles/Product.css';
 
 export default class Product extends Component {
   render() {
@@ -12,7 +13,7 @@ export default class Product extends Component {
         <p className="product-id">{ id }</p>
         <img src={ thumbnail } alt={ title } />
         <p>{title}</p>
-        <p>{price}</p>
+        <p>{`R$ ${price}`}</p>
       </div>
     );
   }

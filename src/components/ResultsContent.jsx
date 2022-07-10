@@ -24,7 +24,7 @@ export default class ResultsContent extends Component {
           results.length === 0
             ? <p>Nenhum produto foi encontrado</p>
             : (
-              <div>
+              <div className="inner-content">
                 {
                   results.map(({ id, price, thumbnail, title }) => (<Product
                     key={ id }
