@@ -26,3 +26,15 @@ export function setProductsFromLocalStorage(newItem) {
   const newItemstr = JSON.stringify(newItem);
   localStorage.setItem('cartItems', newItemstr);
 }
+
+export function getProductsEvaluationFromLocalStorage() {
+  if (localStorage.getItem('productsEvaluation')) {
+    return JSON.parse(localStorage.getItem('productsEvaluation'));
+  }
+  return undefined;
+}
+
+export function setProductsEvaluationToLocalStorage(newItem) {
+  const newItemStr = JSON.stringify(newItem);
+  localStorage.setItem('productsEvaluation', newItemStr);
+}
