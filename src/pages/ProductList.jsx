@@ -24,7 +24,6 @@ export default class ProductList extends Component {
     // String vazia retorna falso.
     if (categoryValue && categoryValue !== prevCategoryValue) {
       this.getProductsByCategory();
-      console.log('Atualizou');
     }
   }
 

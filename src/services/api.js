@@ -15,4 +15,14 @@ export async function getProductFromId(productId) {
   return response.json();
 }
 
-// getProductsFromCategoryAndQuery('','computador');
+export function getProductsFromLocalStorage() {
+  if (localStorage.getItem('cartItems')) {
+    return JSON.parse(localStorage.getItem('cartItems'));
+  }
+  return undefined;
+}
+
+export function setProductsFromLocalStorage(newItem) {
+  const newItemstr = JSON.stringify(newItem);
+  localStorage.setItem('cartItems', newItemstr);
+}
