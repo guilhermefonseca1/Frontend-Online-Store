@@ -6,7 +6,8 @@
   box-shadow: 0 2px 4px #ccc;
   cursor: pointer;
   display: flex;
-  gap: 10px;
+
+  /* gap: 10px; */
   justify-content: space-between;
   padding: 10px;
 }
@@ -17,4 +18,11 @@
 
 .product-id {
   display: none;
+}
+
+.Product div {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
 }
