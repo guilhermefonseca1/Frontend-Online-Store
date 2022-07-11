@@ -89,3 +89,8 @@
 .cartInfo button {
   padding: 5px 10px;
 }
+
+.mainHeader {
+  height: 30px;
+  position: relative;
+}
