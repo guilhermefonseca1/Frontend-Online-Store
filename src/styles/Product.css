@@ -4,12 +4,15 @@
   border: 1px solid white;
   border-radius: 10px;
   box-shadow: 0 2px 4px #ccc;
-  cursor: pointer;
   display: flex;
-
-  /* gap: 10px; */
+  gap: 20px;
   justify-content: space-between;
   padding: 10px;
+}
+
+.Product a {
+  display: flex;
+  flex-grow: 1;
 }
 
 .Product:hover {
@@ -20,9 +23,23 @@
   display: none;
 }
 
-.Product div {
+.ProductInfo {
   align-items: center;
   display: flex;
   flex-grow: 1;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.addToCart {
+  align-items: center;
+  display: flex;
+  gap: 2px;
+}
+
+.productQuantity {
+  border: 2px solid #666;
+  border-radius: 100px;
+  padding: 5px 0;
+  text-align: center;
+  width: 42px;
 }
