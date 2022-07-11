@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { getProductsFromLocalStorage } from '../services/api';
+import '../styles/Cart.css';
+import Product from '../components/Product';
 
 export default class Cart extends Component {
   constructor() {
@@ -22,28 +24,27 @@ export default class Cart extends Component {
     const { cartItems } = this.state;
     return (
       <div className="wrapper">
-        {
-          cartItems.length === 0
-            ? <h1 data-testid="shopping-cart-empty-message">Seu carrinho está vazio</h1>
-            : cartItems.map(({ id, price, title, qnt }) => (
-              <div
-                key={ id }
-              >
-                <p>
-                  {`R$ ${price}`}
-                </p>
-                <p data-testid="shopping-cart-product-name">
-                  {title}
-                </p>
-                <p data-testid="shopping-cart-product-quantity">
-                  {qnt}
-                </p>
-              </div>
-
-            ))
-
-        }
-
+        <div className="centerContent">
+          {
+            cartItems.length === 0
+              ? <h1 data-testid="shopping-cart-empty-message">Seu carrinho está vazio</h1>
+              : cartItems.map(({
+                id,
+                price,
+                title,
+                qnt,
+                thumbnail,
+              }) => (
+                <Product
+                  key={ id }
+                  id={ id }
+                  title={ title }
+                  price={ price }
+                  thumbnail={ thumbnail }
+                  qnt={ qnt }
+                />))
+          }
+        </div>
       </div>
     );
   }
