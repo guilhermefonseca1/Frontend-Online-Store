@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getProductsEvaluationFromLocalStorage, setProductsEvaluationToLocalStorage } from '../services/api';
+import { getProductsEvaluationFromLocalStorage,
+  setProductsEvaluationToLocalStorage } from '../services/api';
 
 class Form extends React.Component {
   constructor() {
