@@ -31,13 +31,12 @@ class Evaluations extends React.Component {
           evaluationsFilteredById.length === 0
             ? <h1>Este produto ainda não possui nenhuma avaliação. </h1>
             : evaluationsFilteredById.map(({
-              id,
               email,
               nota,
               textDescription,
-            }) => (
+            }, index) => (
               <EvaluationCard
-                key={ id }
+                key={ index }
                 email={ email }
                 nota={ nota }
                 textDescription={ textDescription }

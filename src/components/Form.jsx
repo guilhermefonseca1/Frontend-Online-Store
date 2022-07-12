@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { getProductsEvaluationToLocalStorage,
   setProductsEvaluationToLocalStorage } from '../services/api';
+import Evaluations from './Evaluations';
 
 class Form extends React.Component {
   constructor() {
@@ -48,47 +49,52 @@ class Form extends React.Component {
       email,
       nota,
     } = this.state;
+    const { id } = this.props;
 
     return (
-      <form>
-        <label htmlFor="email">
-          Email
-          <input
-            type="email"
-            id="email"
-            data-testid="product-detail-email"
-            value={ email }
-            onChange={ this.handleChange }
-          />
-        </label>
+      <div>
+        <form>
+          <label htmlFor="email">
+            Email
+            <input
+              type="email"
+              id="email"
+              data-testid="product-detail-email"
+              value={ email }
+              onChange={ this.handleChange }
+            />
+          </label>
 
-        <select value={ nota } id="nota" onChange={ this.handleChange }>
-          <option data-testid="1-rating" value="1">1</option>
-          <option data-testid="2-rating" value="2">2</option>
-          <option data-testid="3-rating" value="3">3</option>
-          <option data-testid="4-rating" value="4">4</option>
-          <option data-testid="5-rating" value="5">5</option>
-        </select>
+          <select value={ nota } id="nota" onChange={ this.handleChange }>
+            <option data-testid="1-rating" value="1">1</option>
+            <option data-testid="2-rating" value="2">2</option>
+            <option data-testid="3-rating" value="3">3</option>
+            <option data-testid="4-rating" value="4">4</option>
+            <option data-testid="5-rating" value="5">5</option>
+          </select>
 
-        <label htmlFor="textDescription">
-          Descrição
-          <textarea
-            data-testid="product-detail-evaluation"
-            id="textDescription"
-            value={ textDescription }
-            onChange={ this.handleChange }
-          />
-        </label>
+          <label htmlFor="textDescription">
+            Descrição
+            <textarea
+              data-testid="product-detail-evaluation"
+              id="textDescription"
+              value={ textDescription }
+              onChange={ this.handleChange }
+            />
+          </label>
 
-        <button
-          type="submit"
-          data-testid="submit-review-btn"
-          onClick={ this.handleClick }
-        >
-          Enviar
-        </button>
+          <button
+            type="submit"
+            data-testid="submit-review-btn"
+            onClick={ this.handleClick }
+          >
+            Enviar
+          </button>
 
-      </form>
+        </form>
+        <Evaluations id={ id } />
+      </div>
+
     );
   }
 }

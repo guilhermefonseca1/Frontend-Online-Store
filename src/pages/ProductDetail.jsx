@@ -2,7 +2,6 @@ import { ShoppingCart } from 'phosphor-react';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Evaluations from '../components/Evaluations';
 import Form from '../components/Form';
 import { getProductFromId, getProductsFromLocalStorage,
   setProductsFromLocalStorage } from '../services/api';
@@ -116,9 +115,6 @@ export default class ProductDetail extends Component {
               }
             </section>
           </div>
-          <section className="evaluations">
-            <Evaluations id={ productId } />
-          </section>
 
         </section>
       </>
