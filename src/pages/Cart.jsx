@@ -61,6 +61,7 @@ export default class Cart extends Component {
               className="buttonFinalizar"
               type="button"
               onClick={ this.goToFinish }
+              data-testid="checkout-products"
             >
               Finalizar Compra
               <Check

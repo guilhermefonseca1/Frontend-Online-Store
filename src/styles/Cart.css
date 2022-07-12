@@ -3,17 +3,17 @@
 }
 
 .buttonFinalizar {
-  display: flex;
   align-items: center;
-  padding: 5px 15px;
+  display: flex;
   font-size: 16px;
-  gap: 10px;
   font-weight: 700;
+  gap: 10px;
+  padding: 5px 15px;
 }
 
 .cartHeader {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
-  
+
 }
