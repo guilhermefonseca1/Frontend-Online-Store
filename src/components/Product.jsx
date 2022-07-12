@@ -11,8 +11,19 @@ export default class Product extends Component {
     super(props);
     const { qnt } = this.props;
     this.state = {
+      isAdded: false,
       productQuantity: qnt,
     };
+  }
+
+  componentDidMount() {
+    const { id } = this.props;
+    const cartItems = getProductsFromLocalStorage();
+    if (cartItems) {
+      this.setState({
+        isAdded: cartItems.some(({ id: someId }) => someId === id),
+      });
+    }
   }
 
   handleQuantity = ({ target }) => {
@@ -29,6 +40,9 @@ export default class Product extends Component {
   }
 
   addToCart = () => {
+    this.setState({
+      isAdded: true,
+    });
     const { id, price, thumbnail, title } = this.props;
     const { productQuantity: qnt } = this.state;
     const cartItems = getProductsFromLocalStorage();
@@ -41,8 +55,20 @@ export default class Product extends Component {
     return setProductsFromLocalStorage(newCartItems);
   }
 
+  removeFromCart = () => {
+    this.setState({
+      isAdded: false,
+      productQuantity: 1,
+    });
+    const { id } = this.props;
+    const cartItems = getProductsFromLocalStorage();
+    // console.log(cartItems);
+    const newCartItems = cartItems.filter(({ id: filterId }) => filterId !== id);
+    return setProductsFromLocalStorage(newCartItems);
+  }
+
   render() {
-    const { productQuantity } = this.state;
+    const { productQuantity, isAdded } = this.state;
     const { id, price, thumbnail, title } = this.props;
     return (
       <div className="Product">
@@ -78,13 +104,27 @@ export default class Product extends Component {
             size={ 28 }
             onClick={ this.handleQuantity }
           />
-          <button
-            type="button"
-            data-testid="product-add-to-cart"
-            onClick={ this.addToCart }
-          >
-            Add to Cart
-          </button>
+          {
+            isAdded ? (
+              <button
+                type="button"
+                data-testid="product-add-to-cart"
+                onClick={ this.removeFromCart }
+              >
+                Remove
+              </button>
+            )
+              : (
+                <button
+                  type="button"
+                  data-testid="product-add-to-cart"
+                  onClick={ this.addToCart }
+                >
+                  Add to Cart
+                </button>
+              )
+          }
+          <p>{ productQuantity * price }</p>
         </div>
       </div>
     );
