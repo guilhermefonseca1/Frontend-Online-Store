@@ -1,3 +1,19 @@
 .centerContent {
   display: flex;
 }
+
+.buttonFinalizar {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  font-size: 16px;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.cartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
