@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getProductsEvaluationFromLocalStorage,
+import { getProductsEvaluationToLocalStorage,
   setProductsEvaluationToLocalStorage } from '../services/api';
 
 class Form extends React.Component {
@@ -32,7 +32,8 @@ class Form extends React.Component {
       email,
       nota,
     };
-    const evaluations = getProductsEvaluationFromLocalStorage();
+    const evaluations = getProductsEvaluationToLocalStorage();
+
     if (evaluations) {
       const newEvaluations = [...evaluations, newEvaluation];
       return setProductsEvaluationToLocalStorage(newEvaluations);
