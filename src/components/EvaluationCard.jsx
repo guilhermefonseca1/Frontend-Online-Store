@@ -15,9 +15,7 @@ class EvaluationCard extends React.Component {
           }
         </p>
         <p>
-          {
-            `Avaliação: ${textDescription}`
-          }
+          {textDescription}
         </p>
       </div>
     );
