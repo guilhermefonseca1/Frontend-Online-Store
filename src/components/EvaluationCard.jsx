@@ -26,7 +26,7 @@ class EvaluationCard extends React.Component {
 
 EvaluationCard.propTypes = {
   email: PropTypes.string.isRequired,
-  nota: PropTypes.number.isRequired,
+  nota: PropTypes.string.isRequired,
   textDescription: PropTypes.string.isRequired,
 };
 

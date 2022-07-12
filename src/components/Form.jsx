@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { getProductsEvaluationToLocalStorage,
   setProductsEvaluationToLocalStorage } from '../services/api';
-import Evaluations from './Evaluations';
 
 class Form extends React.Component {
   constructor() {
@@ -24,8 +23,9 @@ class Form extends React.Component {
     });
   }
 
-  handleClick = () => {
-    const { id } = this.props;
+  handleClick = (event) => {
+    event.preventDefault();
+    const { id, addNewEvaluation } = this.props;
     const { textDescription, email, nota } = this.state;
     const newEvaluation = {
       id,
@@ -34,7 +34,7 @@ class Form extends React.Component {
       nota,
     };
     const evaluations = getProductsEvaluationToLocalStorage();
-
+    addNewEvaluation(newEvaluation);
     if (evaluations) {
       const newEvaluations = [...evaluations, newEvaluation];
       return setProductsEvaluationToLocalStorage(newEvaluations);
@@ -49,7 +49,6 @@ class Form extends React.Component {
       email,
       nota,
     } = this.state;
-    const { id } = this.props;
 
     return (
       <div>
@@ -90,9 +89,7 @@ class Form extends React.Component {
           >
             Enviar
           </button>
-
         </form>
-        <Evaluations id={ id } />
       </div>
 
     );
@@ -100,6 +97,7 @@ class Form extends React.Component {
 }
 
 Form.propTypes = {
+  addNewEvaluation: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
 };
 
