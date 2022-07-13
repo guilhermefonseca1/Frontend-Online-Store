@@ -27,7 +27,7 @@ export function setProductsFromLocalStorage(newItem) {
   localStorage.setItem('cartItems', newItemstr);
 }
 
-export function getProductsEvaluationFromLocalStorage() {
+export function getProductsEvaluationToLocalStorage() {
   if (localStorage.getItem('productsEvaluation')) {
     return JSON.parse(localStorage.getItem('productsEvaluation'));
   }

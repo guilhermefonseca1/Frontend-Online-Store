@@ -2,7 +2,7 @@ import { ShoppingCart } from 'phosphor-react';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Form from '../components/Form';
+import Evaluations from '../components/Evaluations';
 import { getProductFromId, getProductsFromLocalStorage,
   setProductsFromLocalStorage } from '../services/api';
 import '../styles/ProductDetail.css';
@@ -86,7 +86,7 @@ export default class ProductDetail extends Component {
               <img src={ pictures[0].url } alt="" />
             </div>
             <div className="form">
-              <Form id={ productId } />
+              <Evaluations id={ productId } />
             </div>
           </div>
           <div className="sideContent">

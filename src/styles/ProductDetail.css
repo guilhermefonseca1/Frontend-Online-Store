@@ -94,3 +94,18 @@
   position: relative;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .evaluations {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px #ccc;
+  display: flex;
+  padding: 10px;
+
+
+} */
