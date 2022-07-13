@@ -5,7 +5,7 @@ class EvaluationCard extends React.Component {
   render() {
     const { email, nota, textDescription } = this.props;
     return (
-      <div>
+      <div className="card">
         <p>
           {email}
         </p>
@@ -15,7 +15,9 @@ class EvaluationCard extends React.Component {
           }
         </p>
         <p>
-          {textDescription}
+          {
+            textDescription
+          }
         </p>
       </div>
     );

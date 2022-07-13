@@ -35,6 +35,11 @@ class Form extends React.Component {
     };
     const evaluations = getProductsEvaluationToLocalStorage();
     addNewEvaluation(newEvaluation);
+    this.setState({
+      textDescription: '',
+      email: '',
+      nota: '0',
+    });
     if (evaluations) {
       const newEvaluations = [...evaluations, newEvaluation];
       return setProductsEvaluationToLocalStorage(newEvaluations);

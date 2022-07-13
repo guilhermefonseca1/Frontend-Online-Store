@@ -14,11 +14,11 @@ class Evaluations extends React.Component {
 
   componentDidMount() {
     const evaluations = getProductsEvaluationToLocalStorage();
-    const { id: idAtual } = this.props;
+    // const { id: idAtual } = this.props;
     if (evaluations) {
-      const evaluationsFilteredById = evaluations.filter(({ id }) => id === idAtual);
+      // const evaluationsFilteredById = evaluations.filter(({ id }) => id === idAtual);
       this.setState({
-        evaluationsFilteredById,
+        evaluationsFilteredById: evaluations,
       });
     }
   }

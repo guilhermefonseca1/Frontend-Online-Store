@@ -94,7 +94,12 @@
   position: relative;
 }
 
-.evaluations {
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .evaluations {
   background-color: white;
   border-bottom: 1px solid #ccc;
   border-radius: 5px;
@@ -103,4 +108,4 @@
   padding: 10px;
 
 
-}
+} */
