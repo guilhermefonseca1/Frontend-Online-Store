@@ -3,15 +3,13 @@
 ## Equipe:
 <a href="https://github.com/guilhermefonseca1">Guilherme Soares Lima</a> / <a href="https://github.com/natomendes">Renato Linhares Mendes</a> / <a href="https://github.com/Melania-Chagas">Melania Chagas</a> / <a href="https://github.com/marcelamchdo">Marcela Machado</a>
 
-## Projeto de avaliação feito em equipe durante o curso da Trybe, buscando colocar em prática:
+## Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos:
 
-* Entender o que são Métodos Ágeis
-* Entender o que é Kanban
-* Entender o que é Scrum
-* Trabalhar em equipes utilizando Kanban ou Scrum de maneira eficaz
+* Trabalhar em equipes utilizando Kanban ou Scrum, cenário próximo ao do mercado de trabalho.
+* Métodos Ágeis
 * Praticar todas as habilidades desenvolvidas até agora no módulo de Front-End
 
-## Esse projeto constitui-se na resolução de 15 requisitos, sendo 12 obrigatórios e 3 bônus.
+## Esse projeto constitui-se na resolução de 21 requisitos, sendo 15 obrigatórios e 6 não avaliativos.
 
 
 #### 1. Implemente o módulo de acesso à api do Mercado Livre
@@ -327,3 +325,29 @@ O que será verificado:
 ```
   - Exibe corretamente a informação de frete grátis dos produtos
 ```
+
+#### 16. Faça um layout para o site
+
+**PRIORIDADE 5** - Adicione ao site um layout agradável para quem usa ter uma boa experiência.
+
+#### 17. Faça um layout responsivo para o site
+
+**PRIORIDADE 5** - Faça um layout responsivo completo, para telas pequenas.
+
+#### 18. Crie um seletor dropdown para ordenar a lista de produto por maior e menor preço
+
+**PRIORIDADE 5** - Crie um seletor dropdown que permite a lista de produtos ser ordenada por maior e menor preço.
+
+#### 19. Coloque uma animação no carrinho para quando um produto for adicionado
+
+**PRIORIDADE 5** - Coloque uma animação no carrinho quando adicionar/remover um produto.
+
+
+#### 20. Crie um slider lateral para exibir o carrinho na tela principal
+
+**PRIORIDADE 5** - Exiba o conteúdo do carrinho num slider na lateral da tela, de forma que ele possa ser exibido e escondido através da interação com botão.
+
+
+#### 21.Destaque, na tela principal, os produtos já adicionados ao carrinho Crie um slider lateral para exibir o carrinho na tela principalDestaque, na tela principal, os produtos já adicionados ao carrinho
+
+**PRIORIDADE 5** - Destaque os produtos que já foram adicionados ao carrinho, diferenciando-os dos demais produtos da lista da página principal.
