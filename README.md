@@ -3,9 +3,9 @@
 ## Equipe:
 <a href="https://github.com/guilhermefonseca1">Guilherme Soares Lima</a> / <a href="https://github.com/natomendes">Renato Linhares Mendes</a> / <a href="https://github.com/Melania-Chagas">Melania Chagas</a> / <a href="https://github.com/marcelamchdo">Marcela Machado</a>
 
-## Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos:
+LINK DO PROJETO: <a href="https://frontend-online-stor.surge.sh/" target="blank">Clique Aqui</a>
 
-LINK DO PROJETO: <a href="https://frontend-online-stor.surge.sh/" target="blank">Clique Aqui</a> 
+## Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos: 
 
 * Trabalhar em equipes utilizando Kanban ou Scrum, cenário próximo ao do mercado de trabalho.
 * Métodos Ágeis
