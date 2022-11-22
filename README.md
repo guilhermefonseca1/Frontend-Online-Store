@@ -1,6 +1,6 @@
 <div align="center"><h1>Frontend Online Store</h1></div>
 
-## Equipe:
+Equipe:
 <a href="https://github.com/guilhermefonseca1">Guilherme Soares Lima</a> / <a href="https://github.com/natomendes">Renato Linhares Mendes</a> / <a href="https://github.com/Melania-Chagas">Melania Chagas</a> / <a href="https://github.com/marcelamchdo">Marcela Machado</a>
 
 
@@ -9,7 +9,7 @@
 
 
 
-## Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos: 
+Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos: 
 
 * Trabalhar em equipes utilizando Kanban ou Scrum, cenário próximo ao do mercado de trabalho.
 * Métodos Ágeis
