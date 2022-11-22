@@ -3,7 +3,7 @@
 ## Equipe:
 <a href="https://github.com/guilhermefonseca1">Guilherme Soares Lima</a> / <a href="https://github.com/natomendes">Renato Linhares Mendes</a> / <a href="https://github.com/Melania-Chagas">Melania Chagas</a> / <a href="https://github.com/marcelamchdo">Marcela Machado</a>
 
-##LINK DO PROJETO: <a href="https://frontend-online-stor.surge.sh/" target="blank">Clique Aqui</a>
+## LINK DO PROJETO: <a href="https://frontend-online-stor.surge.sh/" target="blank">Clique Aqui</a>
 
 ## Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos: 
 
