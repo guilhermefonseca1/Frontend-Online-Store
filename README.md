@@ -5,6 +5,8 @@
 
 ## Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvolvidos:
 
+LINK DO PROJETO: <a href="https://frontend-online-stor.surge.sh/" target="blank">Clique Aqui</a> 
+
 * Trabalhar em equipes utilizando Kanban ou Scrum, cenário próximo ao do mercado de trabalho.
 * Métodos Ágeis
 * Praticar todas as habilidades desenvolvidas até agora no módulo de Front-End
