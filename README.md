@@ -13,7 +13,6 @@ Projeto em grupo desenvolvido durante o curso da Trybe. Principais temas desenvo
 
 * Trabalhar em equipes utilizando Kanban ou Scrum, cenário próximo ao do mercado de trabalho.
 * Métodos Ágeis
-* Praticar todas as habilidades desenvolvidas até agora no módulo de Front-End
 
 ## Esse projeto constitui-se na resolução de 21 requisitos, sendo 15 obrigatórios e 6 não avaliativos.
 
